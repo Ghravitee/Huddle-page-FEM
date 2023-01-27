@@ -1,0 +1,67 @@
+body {
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Violet);
+  color: var(--White);
+  text-align: center;
+
+  @media (min-width: 50em) {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+  }
+
+}
+
+
+footer {
+  margin-top: 4.5rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  @media (min-width: 50em) {
+    justify-content: flex-end;
+      }
+}
+
+.fa-brands + .fa-brands {
+  margin-left: .7rem;
+}
+
+.layout {
+
+  @media (min-width: 50em) {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin-top: 5rem;
+
+    &__image {
+      width: 65%;
+    }
+  
+    &__text {
+      width: 40%;
+      text-align: left;
+      
+  }
+}
+
+  @media (min-width: 80em) {
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+
+    &__image {
+      width: 60%;
+    }
+  
+    &__text {
+      width: 40%;
+  }
+  
+  }
+}
+

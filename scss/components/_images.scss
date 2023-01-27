@@ -1,0 +1,19 @@
+.logo {
+    height: 2rem;
+    margin-bottom: var(--spacer);
+    max-width: 20rem;
+}
+
+.fa-brands {
+    border: 1px solid var(--White);
+    background-color: var(--Violet);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: .2rem;
+}
+
+.fa-brands:hover {
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}

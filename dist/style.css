@@ -1,0 +1,234 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Poppins", sans-serif;
+  --spacer: 3.3rem;
+  --fs-400: .8125rem;
+  --fs-600: .9625rem;
+  --br: 2rem;
+}
+
+/* For box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removes default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* List elements */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/*  root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Default styles for elements that do not have a class*/
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Global styling for images*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+ul {
+  padding-left: 0;
+}
+
+body {
+  background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Violet);
+  color: var(--White);
+  text-align: center;
+}
+@media (min-width: 50em) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+  }
+}
+
+footer {
+  margin-top: 4.5rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 50em) {
+  .socials {
+    justify-content: flex-end;
+  }
+}
+
+.fa-brands + .fa-brands {
+  margin-left: 0.7rem;
+}
+
+@media (min-width: 50em) {
+  .layout {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+  .layout__image {
+    width: 65%;
+  }
+  .layout__text {
+    width: 40%;
+    text-align: left;
+  }
+}
+@media (min-width: 80em) {
+  .layout {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+  .layout__image {
+    width: 60%;
+  }
+  .layout__text {
+    width: 40%;
+  }
+}
+
+.container {
+  max-width: 80rem;
+  padding: 2em 1.5em;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.5rem 3.5rem;
+  background: var(--White);
+  color: var(--Violet);
+  border-radius: var(--br);
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+a.btn {
+  text-decoration: none;
+  font-family: var(--ff-primary);
+}
+
+a.btn:hover {
+  cursor: pointer;
+  color: var(--White);
+  background-color: var(--Soft-Magenta);
+}
+
+.logo {
+  height: 2rem;
+  margin-bottom: var(--spacer);
+  max-width: 20rem;
+}
+
+.fa-brands {
+  border: 1px solid var(--White);
+  background-color: var(--Violet);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  padding: 0.2rem;
+}
+
+.fa-brands:hover {
+  border: 1px solid var(--Soft-Magenta);
+  color: var(--Soft-Magenta);
+}
+
+.title {
+  margin: 0 auto;
+  margin-top: var(--spacer);
+  font-family: var(--ff-primary);
+  font-size: 1.5rem;
+  width: 90%;
+}
+@media (min-width: 50em) {
+  .title {
+    margin-left: 0;
+    font-size: 1.8rem;
+    width: 100%;
+    --spacer: 1rem;
+  }
+}
+@media (min-width: 80em) {
+  .title {
+    font-size: 2.5rem;
+    --spacer: 3rem;
+  }
+}
+
+.paragraph {
+  font-family: var(--ff-secondary);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  font-size: 1rem;
+}
+@media (min-width: 50em) {
+  .paragraph {
+    margin-bottom: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
